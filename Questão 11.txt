@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+float aloha[10], coisas[10][5], *pf, value = 2.2;
+int i=3;
+
+aloha[2] = value; //Válido
+scanf("%f", &aloha); //Válido
+//aloha = value; //Inválido (O vetor só pode receber um valor quando especificado sua posição)
+printf("%f", aloha); //Válido
+coisas[4][4] = aloha[3]; //Válido
+//coisas[5] = aloha; /*Não se pode atribuir à uma variável um vetor, pois
+		   cada posição do vetor se comporta como uma variável*/
+//pf = value; //Inválido (incompatibilidade com o tipo das variáveis, 'pf' e 'value')
+pf = aloha; //Válido
+
+return 0;
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+system("clear");
+
+int i=3,j=2;
+int *p,*q;
+//p = i; (Não irá funcionar, pq um ponteiro não pode receber um valor)
+q = &j;
+p = &*&i;
+//i = (*&)j; (Não irá funcionar, pq um ponteiro não pode receber um valor)
+i = *&j;
+i = *&*&j;
+//q = *p; (Não irá funcionar, pq um ponteiro não pode receber um valor)
+i = (*p)++ + *q;
+  return 0;
+}

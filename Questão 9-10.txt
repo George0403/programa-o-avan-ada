@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+  printf("RESOSTAS\n");
+  printf("\nx for declarado como char?");
+  printf("\nx+1 = 4093, x+2 = 4094; e x+3 = 4095.");
+  printf("\n 1001856549 1001856550 1001856551.\n\n");
+  printf("x for declarado como int?");
+  printf("\nx+1 = 4094, x+2 = 4098; e x+3 = 4102.");
+  printf("\n559030210 559030212 559030214.");
+  printf("\n\nx for declarado como float?");
+  printf("\nx+1 = 4096, x+2 = 4100; e x+3 = 4104.");
+  printf("\n1549679988 1549679992 1549679996.");
+  printf("\n\nx for declarado como double?");
+  printf("\nx+1 = 5100, x+2 = 5108; e x+3 = 5116.");
+  printf("\n906423752 906423760 906423768");
+  return 0;
+}

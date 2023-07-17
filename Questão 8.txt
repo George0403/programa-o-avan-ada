@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+  system("clear");
+//A) mostrar todos os elementos do vetor vet na tela de apresentação
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+  printf("%d\n",*(vet+i));
+  }
+//B) mostrar todos os endereços correspondentes a cada elementos do vetor vet
+  for(i=0;i<3;i++){
+  printf("%X\n",vet+i);
+  }
+
+  
+  return 0;
+}

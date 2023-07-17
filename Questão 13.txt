@@ -1,0 +1,61 @@
+//De forma similiar às variáveis, as Funções podem ser acessadas usando 
+#include <stdio.h>
+#include <stdlib.h>
+
+// Função que ordena os elementos da lista 
+void ordenar(float *lista,int quant){
+  
+  float aux;
+  for(int i = 0; i < quant; i++ ){
+    for(int j = i; j < quant; j++){
+      if(lista[i]>lista[j]){
+        aux = lista[i];
+        lista[i] = lista[j];
+        lista[j] = aux;
+      }        
+    }
+  }
+}
+
+// Função que mostra os elementos da lista 
+void mostrar(float *lista, int quant){
+  for(int i = 0; i < quant; i++){
+    printf("%.2f \n",lista[i]);
+  }
+}
+
+int main(void) {
+  
+  int i, n;
+  float *lista;
+  float aux;
+  
+  printf("Informe a quantidade de numeros que deseja ordenar:\n");
+  scanf("%d", &n);
+  printf("\n");
+  
+  // Alocando um bloco de memoria
+  lista = (float *)malloc(n * sizeof(float));
+  if (lista == NULL) {
+    printf("Erro: memoria insuficiente\n");
+    exit(1);
+  }
+  
+  for (i = 0; i < n; i++){
+      printf("Digite o valor da posicao %d: \n", i+1);
+      scanf("%f", &lista[i]);
+  }
+  
+  printf("\nNumeros informados:\n");
+  mostrar(lista,n);
+ 
+  printf("\nNumeros informados em ordem crescente:\n");
+  ordenar(lista,n);
+  mostrar(lista,n);
+  
+  // Liberando a memoria alocada
+  free(lista);
+  lista = NULL;
+
+  return 0;
+}

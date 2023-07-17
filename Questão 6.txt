@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+system("clear");
+
+int pulo[5];
+
+printf("%d\n",*(pulo + 2));
+//*(pulo + 4);
+//pulo + 4;
+printf("%x\n",pulo + 2);
+  
+  return 0;
+}
